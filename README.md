@@ -19,37 +19,31 @@ The primary goal is to extract hourly Bitcoin price data, load it into a DuckDB 
 
 ## Project Structure
 
-lydia-data-engineer-ELT-pipeline/
-├── .astro/                # Astro configuration directory (managed by Astro CLI)
-│   └── config.yaml
-├── dags/                  # Your Airflow DAG files
-│   ├── elt_pipeline_dag.py
-│   └── exampledag.py
-├── dbt_project/           # Your entire dbt project
-│   ├── models/            # dbt models (SQL files)
-│   │   ├── staging/       # Staging models
-│   │   └── marts/         # Final models (like daily_candlesticks.sql)
-│   ├── tests/             # dbt tests (SQL or YAML)
-│   ├── dbt_project.yml    # Main dbt configuration
-│   └── profiles.yml       # dbt connection
-├── include/               # Shared Python code and scripts
-│   ├── extract.py
-│   ├── load.py
-│   └── common_configs.py
-├── plugins/               # Custom Airflow plugins
-├── store/                 # Default location for Astro local SQLite DB (managed by Astro CLI)
-├── data/                  # For persistent data like your DuckDB file
-│   └── crypto.duckdb      # (Will be created by load.py)
-├── tests/                 # Pytest tests (separate from dbt tests)
-│   └── dags/
-│       └── test_dag_example.py
-├── .gitignore             # Files and directories to ignore in Git
-├── airflow_settings.yaml  # Local Airflow variable/connection overrides
-├── Dockerfile             # Extends the base Astro image (adds dbt, etc.)
-├── Makefile               # Convenience commands (make start, make dbt-run, etc.)
-├── packages.txt           # OS-level packages to install in Docker
-├── requirements.txt       # Python dependencies
-└── README.md              # Project documentation
+* **lydia-data-engineer-ELT-pipeline/**
+    * `.astro/`
+        * `config.yaml`
+    * `dags/`
+        * `elt_pipeline_dag.py`
+        * `exampledag.py`
+    * `dbt_project/`
+        * `models/`
+            * `staging/`
+            * `marts/`
+        * `dbt_project.yml`
+        * `profiles.yml`
+    * `include/`
+        * `extract.py`
+        * `load.py`
+        * `visualize.py`
+        * `common_configs.py`
+    * `data/`
+    * `tests/`
+    * `.gitignore`
+    * `Dockerfile`
+    * `Makefile`
+    * `packages.txt`
+    * `requirements.txt`
+    * `README.md`
 
 ## Prerequisites
 
