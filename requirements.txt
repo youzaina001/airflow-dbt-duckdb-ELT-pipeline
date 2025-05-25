@@ -1,0 +1,8 @@
+# Direct dependencies for the Crypto ELT project
+pycoingecko
+duckdb
+dbt-duckdb
+python-dotenv
+pandas
+matplotlib
+mplfinance

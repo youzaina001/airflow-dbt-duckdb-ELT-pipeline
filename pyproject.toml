@@ -1,0 +1,10 @@
+[project]
+name = "lydia-data-engineer-ELT-pipeline"
+version = "0.1.0"
+dependencies = [
+    # Core ELT tools
+    "pycoingecko",    # Using this instead of pyairbyte
+    "duckdb",     # Use a reasonably recent version
+    "dbt-duckdb", # Match dbt and duckdb versions if possible
+    "python-dotenv",
+]
