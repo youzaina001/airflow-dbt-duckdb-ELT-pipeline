@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: raw_data_source  # This is just a logical grouping name for your dbt project
+    # database: main # For DuckDB file connections, often best to omit 'database'
+                  # The 'path' in profiles.yml defines the database (the .db file).
+    schema: main     # This tells dbt the table is in the 'main' schema within crypto.duckdb
+    tables:
+      - name: raw_crypto_prices # This is the actual table name in the 'main' schema
+        description: "Hourly cryptocurrency prices loaded from CoinGecko API."
+        columns:
+          - name: timestamp
+            description: "The timestamp of the price recording."
+            tests:
+              - not_null
+          - name: price
+            description: "The price of the cryptocurrency."
+            tests:
+              - not_null
+          - name: coin_id
+            description: "The ID of the cryptocurrency (e.g., bitcoin)."
+            tests:
+              - not_null

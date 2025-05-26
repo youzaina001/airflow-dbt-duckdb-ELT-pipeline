@@ -1,0 +1,19 @@
+# dbt_project/dbt_project.yml
+name: 'crypto_pipeline'
+version: '1.0.0'
+config-version: 2
+
+# Add this line if it's missing!
+profile: 'crypto_pipeline' 
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"

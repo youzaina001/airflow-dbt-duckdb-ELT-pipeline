@@ -1,0 +1,7 @@
+# dbt_project/profiles.yml
+crypto_pipeline: # This must match the 'profile:' value in dbt_project.yml
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../data/crypto.duckdb # Path to your DB inside the container
