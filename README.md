@@ -1,5 +1,4 @@
-# lydia-data-engineer-ELT-pipeline
-An ELT pipeline with Airbyte and DBT
+# An ELT pipeline with Airflow, dbt and DuckDB
 
 This project implements an ELT (Extract, Load, Transform) pipeline to process cryptocurrency data, specifically focusing on Bitcoin prices from the CoinGecko API. It uses Apache Airflow for orchestration, DuckDB as the data warehouse, and dbt for transformations. The entire development and execution environment is managed using the Astronomer `astro` CLI.
 
